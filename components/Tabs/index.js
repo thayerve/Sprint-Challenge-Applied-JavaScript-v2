@@ -19,9 +19,18 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
     })
     topics.forEach(topic =>{
         // console.log(topic);
+        createTab(topic);
     })
 })
 
 .catch(error =>{
     console.log('This just in: something is wrong.', error)
 })
+
+function createTab (topic) {
+    const topicsDiv = document.querySelector('.topics');
+    const tab = document.createElement('div');
+    tab.textContent = topic;
+    tab.classList.add('tab');
+    topicsDiv.appendChild(tab)
+}
