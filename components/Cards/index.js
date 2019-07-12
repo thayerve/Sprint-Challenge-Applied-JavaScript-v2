@@ -23,13 +23,17 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 
 .then(response =>{
     const articlesData = response.data.articles;
-    console.log(articlesData)
+    console.log('articlesData: ', articlesData);
+    articlesData.bootstrap.forEach(createCard);
+    articlesData.javascript.forEach(createCard);
+    articlesData.jquery.forEach(createCard);
+    articlesData.node.forEach(createCard);
+    articlesData.technology.forEach(createCard);
 })
 
 .catch(error =>{
-    console.log('An error happened:', error)
+    console.log('Error creating cards for articles:', error)
 })
-
 
 function createCard(article) {
     // create DOM elements
@@ -56,20 +60,10 @@ function createCard(article) {
     authorImg.src = article.authorPhoto;
 
     // set classes & attributes
-
-
+    card.classList.add('card');
+    hl.classList.add('headline');
+    author.classList.add('author');
+    imgCtnr.classList.add('img-container');
 
     // return card // <- is this needed?
 }
-
-
-// <div class="card">
-//   <div class="headline">{Headline of article}</div>
-//   <div class="author">
-//     <div class="img-container">
-//       <img src={url of authors image} />
-//     </div>
-//     <span>By {authors name}</span>
-//   </div>
-// </div>
-//
