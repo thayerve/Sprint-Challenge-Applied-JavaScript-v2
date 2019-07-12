@@ -42,11 +42,34 @@ function createCard(article) {
     const authorByline = document.createElement('span')
 
     // add elements to DOM structure
-
+    cardsContainer.appendChild(card);
+    card.appendChild(hl);
+    card.appendChild(author);
+    author.appendChild(imgCtnr);
+    author.appendChild(authorImg);
+    author.appendChild(authorByline);
 
     // set content
-
+    hl.textContent = article.headline;
+    const authorName = article.authorName;
+    authorByline.textContent = `By: ${authorName}`;
+    authorImg.src = article.authorPhoto;
 
     // set classes & attributes
 
+
+
+    // return card // <- is this needed?
 }
+
+
+// <div class="card">
+//   <div class="headline">{Headline of article}</div>
+//   <div class="author">
+//     <div class="img-container">
+//       <img src={url of authors image} />
+//     </div>
+//     <span>By {authors name}</span>
+//   </div>
+// </div>
+//
