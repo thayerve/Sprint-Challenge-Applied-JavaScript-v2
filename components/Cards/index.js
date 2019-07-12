@@ -59,11 +59,12 @@ function createCard(article) {
     authorByline.textContent = `By: ${authorName}`;
     authorImg.src = article.authorPhoto;
 
-    // set classes & attributes
+    // set classes, styles & attributes
     card.classList.add('card');
     hl.classList.add('headline');
     author.classList.add('author');
     imgCtnr.classList.add('img-container');
+    authorImg.style.width = '40px';
 
     // return card // <- is this needed?
 }

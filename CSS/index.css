@@ -216,7 +216,7 @@ body {
     width: 1200px;
   }
 }
-.cards-container .card {
+.card {
   border-bottom: 1px solid lightgrey;
   display: flex;
   justify-content: space-between;
@@ -227,26 +227,26 @@ body {
   margin-bottom: 16px;
   padding: 24px;
 }
-.cards-container .card .headline {
+.card .headline {
   font-size: 25px;
   font-family: Didot, serif;
 }
-.cards-container .card .author {
+.card .author {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: row;
   margin-top: 15px;
 }
-.cards-container .card .author .img-container {
+.card .author .img-container {
   padding-right: 10px;
   border-right: 1px solid lightgrey;
   height: 40px;
 }
-.cards-container .card .author .img-container img {
+.card .author .img-container img {
   width: 40px;
 }
-.cards-container .card .author span {
+.card .author span {
   padding-left: 10px;
   font-size: 12px;
   letter-spacing: 1px;
