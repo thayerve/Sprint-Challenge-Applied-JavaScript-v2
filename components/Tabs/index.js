@@ -11,15 +11,15 @@
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
 
 .then(response => {
-    console.log(response);
+    // console.log(response);
     const topics = [];
     response.data.topics.forEach(dataTopic =>{
-        topics.push(dataTopic);
+        topics.push(dataTopic)
         // console.log(`added ${dataTopic} to topics array`)
-    })
+    });
     topics.forEach(topic =>{
         // console.log(topic);
-        createTab(topic);
+        createTab(topic)
     })
 })
 
